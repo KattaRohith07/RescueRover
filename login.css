@@ -1,0 +1,93 @@
+/* login.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url("https://images.unsplash.com/photo-1614044252073-ba5158b4609a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1283&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+  }
+  
+  .signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  #container {
+    width: 400px;
+    padding: 2%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    height: 80vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    background-image: url(https://i.gifer.com/WBVi.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  .form-holder {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .input:hover{
+    
+    transition: 0.5s;
+  }
+  .submit-btn {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color:brown;
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p{
+    color: white;
+    display: block;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+  }
+  p .submit-btn{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  

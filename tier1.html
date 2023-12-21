@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RescueRover</title>
+  <style>
+    body {
+    background-image: url(./images/hush-naidoo-jade-photography-yo01Z-9HQAw-unsplash.jpg);
+    background-size:cover;
+    background-position: center;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .card-container {
+    padding-left: 10%;
+      perspective: 1000px;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      gap: 5px;
+    }
+
+    .card {
+      width: 300px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      margin: 10px;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .front {
+      background-image: linear-gradient(black,white);
+      color: black;
+    }
+
+    .back {
+      background-color: white;
+      color: black;
+      transform: rotateY(180deg);
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <div class="card-content">
+          <h2>THIRUVANMIYUR</h2>
+        </div>
+      </div>
+      <div class="card-face back">
+        <div class="card-content">
+          <h2>TIER 1</h2>
+          <p>Dr MCN Memorial Multi Speciality Centre, 1A, Sai Guru Kripa, New No.47 Old, 11, E Mada St, Thiruvanmiyur, Chennai, Tamil Nadu 600041 - 12.994247375437249, 80.26176048034726</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-face front">
+        <div class="card-content">
+          <h2>TONDIARPET</h2>
+        </div>
+      </div>
+      <div class="card-face back">
+        <div class="card-content">
+          <h2>TIER 1</h2>
+          <p>KVT Multi Speciality Hospital, Plot No. 1, 2,3, Ethiraj Samy Salai Rd, Erukkancheri, Kodungaiyur, Chennai, Tamil Nadu 600118 - 13.132893724949628, 80.24966335030636</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-face front">
+        <div class="card-content">
+          <h2>SAIDAPET</h2>
+        </div>
+      </div>
+      <div class="card-face back">
+        <div class="card-content">
+          <h2>TIER 1</h2>
+          <p>Government Hospital, Jones Road, Anna Nagar St, Saidapet, Chennai, Tamil Nadu 600015 - 13.026347332141292, 80.22296106555778</p>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="card">
+      <div class="card-face front">
+        <div class="card-content">
+          <h2>SAIDAPET</h2>
+        </div>
+      </div>
+      <div class="card-face back">
+        <div class="card-content">
+          <h2>TIER 1</h2>
+          <p>Rainbow Children’s Hospital and BirthRight by Rainbow, Guindy, Metro Station, 157, Anna Salai, near Little Mount, Little Mount, Guindy, Chennai, Tamil Nadu 600015 - 13.020602401932578, 80.2233122491189</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>KODAMBAKAM</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Apollo Spectra Hospital, 12, CP Ramaswamy Iyer Rd, Natesan Colony, Alwarpet, Chennai, Tamil Nadu 600018 - 13.042117949781467, 80.25721920403066</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>KILPAUK</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Govt. Kilpauk Hospital, 36GR+QVH, Lake, New Bupathy Nagar, Chetpet, Chennai, Tamil Nadu 600031 - 13.08294381685127, 80.24258792752669
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>KODAMBAKAM</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Vijaya Hospital, No:434, Arcot Rd, Vadapalani, Chennai, Tamil Nadu 600026 - 13.055531310745895, 80.20861430427647</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>ICE HOUSE</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Apollo Hospital, 67a, Kaliamman Koil St, Phase 1, Abirami Nagar, Virugambakkam, Chennai, Tamil Nadu 600092 - 13.055596609094621, 80.19215530427765
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>NUNGAMBAKAM</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Dr. Mehta's Hospitals, No.2/1,2, 3, Mc Nichols Road 3rd Ln, Chetpet, Chennai, Tamil Nadu 600031 - 13.078453496561622, 80.23818604460101
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>PULIANTHOPE</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Nalam Hospital Pvt. Ltd., 1st Cross St, MKB Nagar, Mahakavi Bharathi Nagar, Vyasarpadi, Chennai, Tamil Nadu 600039 - 13.125299848949352, 80.2608895274106</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>AYANAVARAM</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>G.K.M Hospital, 113, P.B Road, Vepery, Purasaiwakkam, Chennai, Tamil Nadu 600087 - 13.096227081031033, 80.25882192688763</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-face front">
+          <div class="card-content">
+            <h2>BASIN BRIDGE</h2>
+          </div>
+        </div>
+        <div class="card-face back">
+          <div class="card-content">
+            <h2>TIER 1</h2>
+            <p>Sri Hospitals, Sanjeevarayanpet, Tondiarpet, Chennai, Tamil Nadu 600081 - 13.128999290376521, 80.28978863655423</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</body>
+</html>
