@@ -1,5 +1,6 @@
 // script.js
 
+
 function check() {
     // Get the input values
     var vehicle = document.getElementById("s_password").value;
