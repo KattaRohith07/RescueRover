@@ -2,11 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/kisspng-logo-portable-network-graphics-image-brand-r-png-sorgusuna-uygun-resimleri-bedava-indir-5d0027f99da8c8.3275242515602913216458 (1).png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RescueRover</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c6920433d0.js" crossorigin="anonymous"></script>
+    <style>
+        .container1{
+    width: 100%;
+    height: 80vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:  0px 5px 25px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputBox{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inputBox input[type="text"], .inputBox input[type="email"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.inputBox textarea{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.inputBox button{
+    border: none;
+    outline: none;
+    display: inline-block;
+    background: #ff004f;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.alert{
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+    </style>
 </head>
 <body>
 <div id="header">
@@ -109,14 +192,35 @@
                     <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="contact-rightt">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="name" placeholder="your name" required>
-                    <input type="email" name="email" placeholder="your email" required>
-                    <textarea name="message" rows="6" placeholder="your message"></textarea>
+            <!-- <div class="contact-rightt">
+                <form name="submit-to-google-sheet" id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="your name" required>
+                    <input type="email" id="mail" name="email" placeholder="your email" required>
+                    <textarea name="message" id="message" rows="6" placeholder="your message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
+            </div> -->
+            <div class="container1">
+                <form action="" id="contactForm">
+                    <div class="alert">Your message sent</div>
+        
+                    <div class="inputBox">
+                        <input type="text" id="name" placeholder="Your name...." />
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="email" id="emailid" placeholder="Your Email....." />
+                    </div>
+        
+                    <div class="inputBox">
+                        <textarea id="msgContent" cols="30" rows="20" placeholder="Message"></textarea>
+                    </div>
+        
+                    <div class="inputBox">
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -153,24 +257,7 @@
     }
 </script>
 
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyHvXiGU9kpEWfE0KE6TUMU1aYT9uqRC5dBmJ9aYQCcY1uiFNwN1O39_GVpqIMm20wL/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg=document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML="message sent successfully!"
-            setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="contact.js"></script>
 </body>
 </html>

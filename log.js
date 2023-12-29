@@ -14,13 +14,14 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAUwA-IvMnRvBGCyajjLNyVQaHkfQkzEJE",
-    authDomain: "rescuerover-7760d.firebaseapp.com",
-    projectId: "rescuerover-7760d",
-    storageBucket: "rescuerover-7760d.appspot.com",
-    messagingSenderId: "492177587357",
-    appId: "1:492177587357:web:5ca4c825ed43098ebf6874",
-    measurementId: "G-B5WD0Y5DLG"
+  apiKey: "AIzaSyBhd9Q2uwNtNrbovMN9HlaZ5o_cQLzvUrw",
+  authDomain: "rescuerover-login.firebaseapp.com",
+  databaseURL: "https://rescuerover-login-default-rtdb.firebaseio.com",
+  projectId: "rescuerover-login",
+  storageBucket: "rescuerover-login.appspot.com",
+  messagingSenderId: "58668279522",
+  appId: "1:58668279522:web:7a9caf84ff99666a5320bb",
+  measurementId: "G-MHRF2Y4DB5"
 };
 
 // Initialize Firebase
@@ -69,27 +70,28 @@ function sign_up_f() {
   // Get field data
   const name_s = document.getElementById("s_name").value;
   const email = document.getElementById("s_email").value;
-  const password = document.getElementById("s_password").value;
+  const licence = document.getElementById("s_password").value;
 
   // Validations
   if (
     validate_email(email) == false ||
-    validate_password(password) == false ||
+    validate_password(licence) == false ||
     validate_field(name_s) == false
   ) {
     alert("Please enter valid details");
     return;
   }
 
-  createUserWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, name_s, name_s)
     .then(function () {
       var user = auth.currentUser;
       alert("  User Created  ");
 
       var user_data = {
-        email: email,
-        name_s: name_s,
+        email: name_s,
+        name_s: email,
         last_login: Date.now(),
+        licence:licence,
       };
 
       set(ref(database, "users/" + user.uid), user_data);
@@ -100,37 +102,39 @@ function sign_up_f() {
 
       alert(error_msg);
     });
-}
+} 
+// if(user=auth.currentUser){
+//   window.location.href = "maps.html"
+// }
+// function log_in_f() {
+//   //Get Data fields
+//   const email = document.getElementById("l_email").value;
+//   const password = document.getElementById("l_password").value;
 
-function log_in_f() {
-  //Get Data fields
-  const email = document.getElementById("l_email").value;
-  const password = document.getElementById("l_password").value;
+//   //validates
+//   if (validate_email(email) == false || validate_password(licence) == false) {
+//     alert("Please enter valid details");
+//     return;
+//   }
 
-  //validates
-  if (validate_email(email) == false || validate_password(password) == false) {
-    alert("Please enter valid details");
-    return;
-  }
+//   signInWithEmailAndPassword(auth, name_s, password)
+//     .then(function () {
+//       var user = auth.currentUser;
+//       alert("  User Logged In");
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then(function () {
-      var user = auth.currentUser;
-      alert("  User Logged In");
+//       var user_data = {
+//         last_login: Date.now(),
+//       };
 
-      var user_data = {
-        last_login: Date.now(),
-      };
+//       update(ref(database, "users/" + user.uid), user_data);
+//     })
+//     .catch(function (err) {
+//       var error_code = err.code;
+//       var error_msg = err.message;
 
-      update(ref(database, "users/" + user.uid), user_data);
-    })
-    .catch(function (err) {
-      var error_code = err.code;
-      var error_msg = err.message;
-
-      alert(error_msg);
-    });
-}
+//       alert(error_msg);
+//     });
+// }
 
 function validate_email(email) {
   const expression = /^[A-Z0-9]+$/;
@@ -141,8 +145,8 @@ function validate_email(email) {
   }
 }
 
-function validate_password(password) {
-  if (password < 6) {
+function validate_password(licence) {
+  if (licence < 6) {
     return false;
   } else {
     return true;
