@@ -68,9 +68,9 @@ log_in.addEventListener("click", log_in_f, false);
 
 function sign_up_f() {
   // Get field data
-  const name_s = document.getElementById("s_name").value;
-  const email = document.getElementById("s_email").value;
-  const licence = document.getElementById("s_password").value;
+  const name_s = document.getElementById("s_name").value;//stores email
+  const email = document.getElementById("s_email").value;//store vehicle number
+  const licence = document.getElementById("s_password").value;//stores licence number
 
   // Validations
   if (
@@ -86,13 +86,16 @@ function sign_up_f() {
     .then(function () {
       var user = auth.currentUser;
       alert("  User Created  ");
+      
 
       var user_data = {
         email: name_s,
         name_s: email,
         last_login: Date.now(),
         licence:licence,
+        
       };
+      
 
       set(ref(database, "users/" + user.uid), user_data);
     })
