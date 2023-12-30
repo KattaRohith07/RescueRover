@@ -106,38 +106,36 @@ function sign_up_f() {
       alert(error_msg);
     });
 } 
-// if(user=auth.currentUser){
-//   window.location.href = "maps.html"
-// }
-// function log_in_f() {
-//   //Get Data fields
-//   const email = document.getElementById("l_email").value;
-//   const password = document.getElementById("l_password").value;
 
-//   //validates
-//   if (validate_email(email) == false || validate_password(licence) == false) {
-//     alert("Please enter valid details");
-//     return;
-//   }
+function log_in_f() {
+  //Get Data fields
+  const email = document.getElementById("l_email").value;
+  const password = document.getElementById("l_password").value;
 
-//   signInWithEmailAndPassword(auth, name_s, password)
-//     .then(function () {
-//       var user = auth.currentUser;
-//       alert("  User Logged In");
+  //validates
+  if (validate_email(email) == false || validate_password(licence) == false) {
+    alert("Please enter valid details");
+    return;
+  }
 
-//       var user_data = {
-//         last_login: Date.now(),
-//       };
+  signInWithEmailAndPassword(auth, name_s, password)
+    .then(function () {
+      var user = auth.currentUser;
+      alert("  User Logged In");
 
-//       update(ref(database, "users/" + user.uid), user_data);
-//     })
-//     .catch(function (err) {
-//       var error_code = err.code;
-//       var error_msg = err.message;
+      var user_data = {
+        last_login: Date.now(),
+      };
 
-//       alert(error_msg);
-//     });
-// }
+      update(ref(database, "users/" + user.uid), user_data);
+    })
+    .catch(function (err) {
+      var error_code = err.code;
+      var error_msg = err.message;
+
+      alert(error_msg);
+    });
+}
 
 function validate_email(email) {
   const expression = /^[A-Z0-9]+$/;
