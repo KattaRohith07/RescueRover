@@ -1,23 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="./images/kisspng-logo-portable-network-graphics-image-brand-r-png-sorgusuna-uygun-resimleri-bedava-indir-5d0027f99da8c8.3275242515602913216458 (1).png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RescueRover</title>
-</head>
-<body>
-    <button style="background-color: black;"><a href="index.html" style="text-decoration: none;color: white;">Back To Home</a></button>
-    <div id="map">
-    </div>
-    <script>
-        navigator.geolocation.getCurrentPosition(position => {
-            const{latitude, longitude}=position.coords;
-            map.innerHTML ='<iframe src="https://www.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed" width="1520" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
-        });
-    </script>
-</body>
-</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,8 +46,8 @@
     <script>
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude } = position.coords;
-            map.innerHTML = '<iframe src="https://www.google.com/maps?q=' + latitude + ',' + longitude + '&amp;z=15&amp;output=embed" width="1520" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+            map.innerHTML = '<iframe src="https://www.google.com/maps?q=' + latitude + ',' + longitude + '&amp;z=15&amp;output=embed" width="1520" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
         });
-    </script>
+    </script>   
 </body>
 </html>
